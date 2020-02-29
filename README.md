@@ -20,8 +20,7 @@ presented, it is segmented and annotated using the pre-trained
 model and used to search the annotations of the ADE20K datset to
 retrieve required images. As a further step, the Visual Geneome
 data est is also annotated and thus augments the data set from
-which
-to search for the items in the query. 
+which to search for the items in the query. 
 
 This submission reports the first project. 
 
@@ -52,11 +51,31 @@ Testing procedure.
 between creation of two indexes to prevent unintended errors.
 5. On a web-browser check that Electric Search daemon is running
 by visiting url localhost:9200. 
-6. In another tab type in url localhost:8053 - This is where the images will be displayed.
-7. In the terminal dun 'python TestVG20.py'. There is some debug printing in the terminal to show what is retrieved from the system. It asks to refresh the browser. Please do so, and the images will be displayed. Still working on the part where the 
-display will be automatically refreshed and when desired the 
-user can clear the images from the screen. Currently Clear Images
-button is not working.
+6. In another tab type in url localhost:8053 
+- This is where the images will be displayed.
+7. In the terminal dun 'python TestVG20.py'. 
+There is some debug printing in the terminal to show 
+what is retrieved from the system. It asks to refresh the browser. 
+Please do so, and the images will be displayed. Still working 
+on the part where the display will be automatically refreshed and 
+when desired the user can clear the images from the screen.
+Currently Clear Images button is not working.
+
+A new file (in lieu of TestVG20.py has been added, This allows
+clearing of images after they are viewed so that the images
+for the fresh queries are displayed in the prime area. 
+After installing Elastic Search, starting it with 
+'sudo systemctl start elasticsearch.service', 
+verify thatis is running by opening localhost:0200
+Rub python ESMAP20.py
+Run python VGdash20.py
+
+For any comments please contact kejitan@gmail.com
+
+Second project is on the way, where a sample image is presnted, 
+the system segments it and annotated=s it and finds similar images
+based on annotations. This part could be used to annotate and then
+search the videos very fast.
 
 The system has been tested on 108077 images and the response
 is very fast. 
